@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huans.github.io/"/>
-  <updated>2017-12-14T10:35:16.452Z</updated>
+  <updated>2017-12-14T13:52:23.118Z</updated>
   <id>https://huans.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Disqus使用方法</title>
+    <link href="https://huans.github.io/2017/12/14/Disqus/"/>
+    <id>https://huans.github.io/2017/12/14/Disqus/</id>
+    <published>2017-12-14T13:11:30.000Z</published>
+    <updated>2017-12-14T13:52:23.118Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>刚刚接触评论系统，上网一搜发现普遍采用的第三方评论系统“多说”已经在今年6月阵亡了。幸好我的主题还能够支持另外一种评论系统——Disqus。博客使用apollo主题搭建，支持Disqus系统，尽管想要做的简洁一些，不把评论系统加上去心里总是不太舒服，于是就着手开干。事情永远没有想象的顺利，所以才有了这篇文章。第一步，到Disqus官网注册账号，支持google和Twitter还有个啥不太记得了。第二步，填写注册的信息，其中有一项website name非常坑爹（后面再说），我用的是github的用户名，没问题第三步， 网上很多教程都差不多顺着点就行第四步，各种配置，也很顺利到这里一切看起来比较顺利，然而在往**主题配置文件**写入 disqus: your shortname 的时候出了麻烦，啥是shortname？前面好像没见过。只写了个website name。硬着头皮往上填了个website name，可想而知，不行，接连注册了好几个ID都没解决，无奈google，在官网的Q&amp;A里面找到了答案，打开账户，查看ID，此时地址栏里出现的第一个字符串（/分隔符）就是shortname，我。。。以为事情到这就差不多了，谁曾想编译，部署文件到github后不管怎么刷新文章下面都没有评论区，以为是写入的命令有问题，结果翻来覆去改了很多遍都不行，连主题都删除重装了，没找到问题所在。偶然间本来的评论区出现如下提示：We were unable to load Disqus. If you are a moderator please see our troubleshooting guide.当时就反应过来了，命令是没错的，可能是又是该死的网络，也就没去看troubleshooting guide，当机立断翻墙了，果然不出所料，Disqus也被墙了！！！这代表着如果你们不会科学上网就不能给我添加评论了~~~~</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;刚刚接触评论系统，上网一搜发现普遍采用的第三方评论系统“多说”已经在今年6月阵亡了。幸好我的主题还能够支持另外一种评论系统——Disqus。
+
+博客使用apollo主题搭建，支持Disqus系统，尽管想要做的简洁一些，不把评论系统加上去心里总是不太舒服，于是
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>利用Hexo+github简单搭建一个blog</title>
