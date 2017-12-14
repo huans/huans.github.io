@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-14T10:10:05.327Z</updated>
+  <updated>2017-12-14T10:14:51.810Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>First_blog</title>
+    <title></title>
     <link href="http://yoursite.com/2017/12/14/First-blog/"/>
     <id>http://yoursite.com/2017/12/14/First-blog/</id>
-    <published>2017-12-14T10:08:38.000Z</published>
-    <updated>2017-12-14T10:10:05.327Z</updated>
+    <published>2017-12-14T10:14:43.972Z</published>
+    <updated>2017-12-14T10:14:51.810Z</updated>
     
     <content type="html"><![CDATA[<h1 id="利用Hexo-github简单搭建一个blog"><a href="#利用Hexo-github简单搭建一个blog" class="headerlink" title="利用Hexo+github简单搭建一个blog"></a>利用Hexo+github简单搭建一个blog</h1><hr><p>##前言<br>发现Github这个网站大概是在一年前了，自己不是从事计算机相关行业，但在课题开展的过程中或多或少的会需要用到一些用的计算机相关知识，偶然间发现Github这个网站，上面分享了非常多实用的，有趣的工具，刚开始觉得特别的炫酷（现在也是），后来就花了很短的时间慢慢研究了一下，也不过浅尝辄止，知道昨天晚上突然有兴致想要搭建一个自己的博客，于是顺理成章地想起Github。Github的功能和特色在此不再赘述，写这篇文章也主要是记录一下耗时近七八个小时的自学过程。如果能对后来的人有什么启示，那么就赋予它更大的意义了。</p><h2 id="注：文章部分内容转自网络，链接在文章最后，感谢作者无私分享。"><a href="#注：文章部分内容转自网络，链接在文章最后，感谢作者无私分享。" class="headerlink" title="注：文章部分内容转自网络，链接在文章最后，感谢作者无私分享。"></a>注：文章部分内容转自网络，链接在文章最后，感谢作者无私分享。</h2><p>##基本步骤<br>1.注册github账号，新建一个仓库<br>2.安装、配置Hexo<br>3.安装、配置git<br>4.发布文章<br>5.选择主题</p><p>##1.注册github账号，新建仓库<br>进入<a href="https://github.com/，在下图的框中，分别输入自己的用户名，邮箱，密码。" target="_blank" rel="noopener">https://github.com/，在下图的框中，分别输入自己的用户名，邮箱，密码。</a></p><p>这些都比较简单，没有遇到任何阻碍。<br>接着就是创建仓库，如图所示，也比较简单。</p><p>##2.安装Hexo<br>配置Node.js环境</p><p>下载Node.js安装文件：</p><p>Windows Installer 32-bit<br>Windows Installer 64-bit<br>根据自己的Windows版本选择相应的安装文件，要是不知道，就安装32-bit的吧- -。 如图所示：</p><p>保持默认设置即可，一路Next，安装很快就结束了。 然后我们检查一下是不是要求的组件都安装好了，同时按下Win和R，打开运行窗口：</p><p>Windows的运行界面</p><p>在新打开的窗口中输入cmd，敲击回车，打开命令行界面。（下文将直接用打开命令行来表示以上操作，记住哦~） 在打开的命令行界面中，输入</p><p>node -v<br>npm -v<br>1<br>2<br>如果结果如下图所示，则说明安装正确，可以进行下一步了，如果不正确，则需要回头检查自己的安装过程。</p><p>配置Git环境</p><p>下载Git安装文件：</p><p>GIt官网下载地址：</p><p>Git-2.6.3-64-bit.exe</p><p>然后就进入了Git的安装界面，如图：</p><p>Git安装界面</p><p>和Node.js一样，大部分设置都只需要保持默认，但是出于我们操作方便考虑，建议PATH选项按照下图选择：</p><p>Git PATH设置</p><p>这是对上图的解释，不需要了解请直接跳过 Git的默认设置下，出于安全考虑，只有在Git Bash中才能进行Git的相关操作。按照上图进行的选择，将会使得Git安装程序在系统PATH中加入Git的相关路径，使得你可以在CMD界面下调用Git，不用打开Git Bash了。<br>一样的，我们来检查一下Git是不是安装正确了，打开命令行，输入：</p><p>git –version<br>1<br>如果结果如下图所示，则说明安装正确，可以进行下一步了，如果不正确，则需要回头检查自己的安装过程。</p><p>首先在E盘目录下创建Hexo文件夹（在哪个盘无特殊要求），并在命令行的窗口进入到该目录</p><p>在命令行中输入：</p><p>npm install hexo-cli -g<br>1<br>然后你将会看到:</p><p>可能你会看到一个WARN，但是不用担心，这不会影响你的正常使用。 然后输入</p><p>npm install hexo –save<br>1<br>然后你会看到命令行窗口刷了一大堆白字，下面我们来看一看Hexo是不是已经安装好了。 在命令行中输入：</p><p>hexo -v<br>1<br>如果你看到了如图文字，则说明已经安装成功了。</p><p>初始化Hexo</p><p>接着上面的操作，输入：</p><p>hexo init<br>1<br>然后输入：</p><p>npm install<br>1<br>之后npm将会自动安装你需要的组件，只需要等待npm操作即可。</p><p>注意：这个步骤需要空文件夹，所以你需要在此之间新建一个文件夹，位置暂时没发现有什么特殊要求</p><p>首次体验Hexo</p><p>继续操作，同样是在命令行中，输入：</p><p>hexo g<br>1</p><p>然后输入：</p><p>hexo s<br>1<br>然后会提示：</p><p>INFO Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="noopener">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.<br>在浏览器中打开<a href="http://localhost:4000/，你将会看到：" target="_blank" rel="noopener">http://localhost:4000/，你将会看到：</a></p><p>到目前为止，Hexo在本地的配置已经全都结束了。</p><p>下面会讲解怎样将Hexo与github page 联系起来</p><p>##3.连接本地git和Github</p><p>1、设置Git的user name和email：(如果是第一次的话)</p><p>git config –global user.name “xujun”<br>git config –global user.email “gdutxiaoxu@163.com”<br>1<br>2<br>2、生成密钥</p><p> ssh-keygen -t rsa -C “gdutxiaoxu@163.com”<br>1<br>一直按Enter键就好了，最终生成密钥文件具体路径在~/.ssh中，打开文件复制其中的key到下图中</p><p>配置Deployment</p><p>同样在_config.yml文件中，找到Deployment，然后按照如下修改：</p><p>deploy:<br>  type: git<br>  repo: git@github.com:yourname/yourname.github.io.git<br>  branch: master<br>1<br>2<br>3<br>4<br>比如我的仓库的地址是git@github.com:gdutxiaoxu/gdutxiaoxu.github.io.git，所以配置如下</p><p>deploy:<br>  type: git<br>  repo: git@github.com:gdutxiaoxu/gdutxiaoxu.github.io.git<br>  branch: master<br>1<br>2<br>3<br>4<br>注意：此处冒号（：）后必须要有空格，不然就会报错了<br>写博客、发布文章</p><p>新建一篇博客，执行下面的命令：</p><p>hexo new post “article title”<br>1</p><p>这时候在我的 电脑的目录下 F:\hexo\source\ _posts 将会看到 article title.md 文件</p><p>用MarDown编辑器打开就可以编辑文章了。文章编辑好之后，运行生成、部署命令：</p><p>hexo g   // 生成<br>hexo d   // 部署<br>1<br>2<br>当然你也可以执行下面的命令，相当于上面两条命令的效果</p><p>hexo d -g #在部署前先生成<br>1</p><p>部署成功后访问 你的地址，<a href="https://yourName.github.io（这里输入我的地址：" target="_blank" rel="noopener">https://yourName.github.io（这里输入我的地址：</a> <a href="https://gdutxiao.github.io" target="_blank" rel="noopener">https://gdutxiao.github.io</a> ),将可以看到生成的文章。</p><p>踩坑提醒</p><p>1）注意需要提前安装一个扩展：<br>npm install hexo-deployer-git –save<br>1<br>1）安装 NexT</p><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 themes 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p><p>下载主题</p><p>如果你熟悉 Git， 建议你使用 克隆最新版本 的方式，之后的更新可以通过 git pull 来快速更新， 而不用再次下载压缩包替换。</p><p>克隆最新版本<br>下载稳定版本<br>在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</p><p>cd your-hexo-site<br>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a> themes/next<br>1<br>2<br>2）启用主题</p><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 站点配置文件， 找到 theme 字段，并将其值更改为 next。</p><p>启用 NexT 主题</p><p>theme: next<br>1<br>到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 我们最好使用 hexo clean 来清除 Hexo 的缓存。</p><p>3）验证主题</p><p>首先启动 Hexo 本地站点，并开启调试模式（即加上 –debug），整个命令是 hexo s –debug。 在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。 当命令行输出中提示出：</p><p>INFO Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="noopener">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.<br>此时即可使用浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ，检查站点是否正确运行。</p><p>当你看到站点的外观与下图所示类似时即说明你已成功安装 NexT 主题。这是 NexT 默认的 Scheme —— Muse</p><p>现在，你已经成功安装并启用了 NexT 主题。下一步我们将要更改一些主题的设定，包括个性化以及集成第三方服务。</p><p>参考：手把手教你用Hexo+Github 搭建属于自己的博客</p>]]></content>
     
@@ -31,48 +31,6 @@
       
         &lt;h1 id=&quot;利用Hexo-github简单搭建一个blog&quot;&gt;&lt;a href=&quot;#利用Hexo-github简单搭建一个blog&quot; class=&quot;headerlink&quot; title=&quot;利用Hexo+github简单搭建一个blog&quot;&gt;&lt;/a&gt;利用Hexo+github简单搭建
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>art</title>
-    <link href="http://yoursite.com/2017/12/14/art/"/>
-    <id>http://yoursite.com/2017/12/14/art/</id>
-    <published>2017-12-14T10:01:05.000Z</published>
-    <updated>2017-12-14T10:01:05.381Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>haha</title>
-    <link href="http://yoursite.com/2017/12/14/haha/"/>
-    <id>http://yoursite.com/2017/12/14/haha/</id>
-    <published>2017-12-14T09:59:45.000Z</published>
-    <updated>2017-12-14T09:59:45.529Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>article title</title>
-    <link href="http://yoursite.com/2017/12/14/article-title/"/>
-    <id>http://yoursite.com/2017/12/14/article-title/</id>
-    <published>2017-12-14T09:51:03.000Z</published>
-    <updated>2017-12-14T09:51:03.792Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
