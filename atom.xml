@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://huans.github.io/"/>
   <updated>2017-12-14T10:35:16.452Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://huans.github.io/</id>
   
   <author>
     <name>Huan Si</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>利用Hexo+github简单搭建一个blog</title>
-    <link href="http://yoursite.com/2017/12/14/First-blog/"/>
-    <id>http://yoursite.com/2017/12/14/First-blog/</id>
+    <link href="https://huans.github.io/2017/12/14/First-blog/"/>
+    <id>https://huans.github.io/2017/12/14/First-blog/</id>
     <published>2017-12-14T10:35:13.477Z</published>
     <updated>2017-12-14T10:35:16.452Z</updated>
     
@@ -36,8 +36,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/12/14/hello-world/"/>
-    <id>http://yoursite.com/2017/12/14/hello-world/</id>
+    <link href="https://huans.github.io/2017/12/14/hello-world/"/>
+    <id>https://huans.github.io/2017/12/14/hello-world/</id>
     <published>2017-12-14T09:30:10.434Z</published>
     <updated>2017-12-14T10:20:30.393Z</updated>
     
