@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huans.github.io/about/index.html</loc>
+    
+    <lastmod>2017-12-15T10:09:51.972Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huans.github.io/2017/12/14/First-blog/</loc>
     
     <lastmod>2017-12-14T14:23:05.027Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://huans.github.io/2017/12/14/Disqus%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/</loc>
     
     <lastmod>2017-12-14T14:11:41.173Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huans.github.io/about/index.html</loc>
-    
-    <lastmod>2017-12-14T11:20:39.808Z</lastmod>
     
   </url>
   
