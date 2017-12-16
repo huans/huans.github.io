@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huans.github.io/"/>
-  <updated>2017-12-14T14:23:05.027Z</updated>
+  <updated>2017-12-16T14:40:28.109Z</updated>
   <id>https://huans.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux下BLAST的安装与使用</title>
+    <link href="https://huans.github.io/2017/12/16/blast/"/>
+    <id>https://huans.github.io/2017/12/16/blast/</id>
+    <published>2017-12-16T12:54:31.000Z</published>
+    <updated>2017-12-16T14:40:28.109Z</updated>
+    
+    <content type="html"><![CDATA[<p>原本计划对几个亚洲棉基因进行blast比对寻找在陆地棉中的同源基因，但是服务器抽风了，导致计划被打乱，不过刚好也乘此机会学习和总结一下BLAST+的安装和使用。<br>本文实测环境为Linux64位系统。</p><p>##1.安装配置BLAST+<br>首先是下载程序，</p><pre><code>wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.30+-x64-linux.tar.gz</code></pre><p>对文件解压</p><pre><code>tar -zxvf ncbi-blast-2.2.30+-x64-linux.tar.gz</code></pre><p>为了方便管理，更喜欢将其移至我的本地安装目录中</p><pre><code>mv ncbi-blast-2.2.30+ ~/local/app/ # 移动cd ~/local/app/                    # 进入本地程序安装路径mv ncbi-blast-2.2.30+ blast        # 修改目录名</code></pre><p>这样就安装到我平时安装本地软件的文件夹里了，当然和其他软件的安装方法一样，你需要将blast+的路径加入到环境变量中，方便以后的调取。</p><pre><code>echo &quot;export PATH=/db/home/shenwei/local/app/blast/bin:\$PATH&quot; &gt;&gt; ~/.bashrcsource ~/.bashrc</code></pre><p>现在一切安装工作已经就绪了</p><p>##2.配置本地的BLAST库<br>为了方便大批量的比对工作，提高工作效率，本地化库是个很好的方法。<br>建立并编辑BLAST全局配置文件</p><pre><code>[hsi@node102 ~]$ cat .ncbirc  #内容如下[BLAST]BLASTDB=/home/hsi/blast/db</code></pre><p>这样配置的好处在于以后调用库的时候不需要写绝对路径，只输入名称就可以。</p><p>##3.准备库文件<br>因为我本地文件夹中有一套fastq格式的基因组序列，所以我直接就用本地文件，不再去下载了，这一部分就不再包括如何下载，如何更新的内容了。</p><p>FAST格式的文件不能作为库直接用于本地的blast，必须要利用makeblastdb进行格式化</p><pre><code>makeblastdb -in input_db -dbtype nucl -parse_seqids -out dbname</code></pre><p>-in: 后加输入文件<br>-dbtype: 代表数据库的类型，nucl是核酸类型，prot是蛋白质类型</p><p>如果该库需要经常使用，可将库文件移到前面配置的库文件的目录，今后在其它目录运行blast的时候，便可直接输入库名（不用输入绝对路径），直接使用。</p><pre><code>mv dbname.* ~/data/blast</code></pre><p>##4.执行BLAST</p><pre><code>blastn -query test.fa -db nt -outfmt 11 -evalue 1e-5 -out &quot;test.blastn@dbname&quot; -num_threads 8</code></pre><p>参数说明:<br>-query： 输入文件路径及文件名<br>-out：输出文件路径及文件名<br>-db：格式化了的数据库路径及数据库名<br>-outfmt：输出文件格式，总共有12种格式<br>-evalue：设置输出结果的e-value值<br>-num_descriptions：tabular格式输出结果的条数<br>-num_threads：线程数</p><p>核酸序列比对核酸数据库（blastn）以及核酸序列比对蛋白数据库（blastx）<br>与上面的blastp用法类似：</p><pre><code>blastn -query seq.fasta -out seq.blast -db dbname -outfmt 6 -evalue 1e-5 -num_descriptions 10 -num_threads 8blastx -query seq.fasta -out seq.blast -db dbname -outfmt 6 -evalue 1e-5 -num_descriptions 10 -num_threads 8</code></pre><p>参数比较简单不再赘述，详情请参考<a href="https://www.ncbi.nlm.nih.gov/books/NBK279690/" target="_blank" rel="noopener">《BLAST® Command Line Applications User Manual》</a>，<a href="http://www.yelinsky.com/blog/archives/421.html" target="_blank" rel="noopener">BLAST+使用方法</a>，<a href="http://blog.shenwei.me/local-blast-installation/" target="_blank" rel="noopener">《Linux系统中NCBI BLAST+本地化教程》</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;原本计划对几个亚洲棉基因进行blast比对寻找在陆地棉中的同源基因，但是服务器抽风了，导致计划被打乱，不过刚好也乘此机会学习和总结一下BLAST+的安装和使用。&lt;br&gt;本文实测环境为Linux64位系统。&lt;/p&gt;
+&lt;p&gt;##1.安装配置BLAST+&lt;br&gt;首先是下载程序，&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>利用Hexo+github简单搭建一个blog</title>
