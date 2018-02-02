@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huans.github.io/"/>
-  <updated>2018-02-02T08:22:57.068Z</updated>
+  <updated>2018-02-02T08:35:09.923Z</updated>
   <id>https://huans.github.io/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>转录组分析之--利用DESeq2进行差异基因的筛选</title>
     <link href="https://huans.github.io/2018/02/02/%E5%88%A9%E7%94%A8DESeq2%E8%BF%9B%E8%A1%8C%E5%B7%AE%E5%BC%82%E8%A1%A8%E8%BE%BE%E5%9F%BA%E5%9B%A0%E7%AD%9B%E9%80%89/"/>
     <id>https://huans.github.io/2018/02/02/利用DESeq2进行差异表达基因筛选/</id>
-    <published>2018-02-02T08:22:38.455Z</published>
-    <updated>2018-02-02T08:22:57.068Z</updated>
+    <published>2018-02-02T08:35:05.955Z</published>
+    <updated>2018-02-02T08:35:09.923Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="利用DESeq2进行差异表达基因筛选"><a href="#利用DESeq2进行差异表达基因筛选" class="headerlink" title="利用DESeq2进行差异表达基因筛选"></a>利用DESeq2进行差异表达基因筛选</h1><p>标签（空格分隔）： RNA-seq</p><hr><p>1.DESeq2的安装<br>source(“<a href="https://bioconductor.org/biocLite.R" target="_blank" rel="noopener">https://bioconductor.org/biocLite.R</a>“)<br>biocLite(“DESeq2”)<br>2.读取数据</p><pre><code>library(DESeq2)data&lt;-read.table(&quot;W_H_S_30min.readcount.txt&quot;,header=T,row.names=1)head(data)</code></pre><p>design&lt;-rep(c(“W10”,”H10”,”S10”,”W30”,”H30”,”S30”,”W60”,”H60”,”S60”,”W240”,”H240”,”S240”),each=3)#3类处理，9个样本</p><p>3.构建dds对象<br>colData &lt;- data.frame(row.names=colnames(data),group_list=design)<br>dds &lt;- DESeqDataSetFromMatrix(countData = data,colData = colData,design = ~group_list)<br>4.做normalization<br>dds2 &lt;- DESeq(dds)<br>5.提取数据<br>res &lt;-  results(dds2, contrast=c(“group_list”,”S30”,”W30”))#这里提取的是S30与W30作比较<br>resOrdered &lt;- res[order(res$padj),]<br>resOrdered=as.data.frame(resOrdered)<br>head(resOrdered)<br>6.进行数据的过滤<br>要选择fold change大于4，padj小于0.05|0.01的基因<br>final.res &lt;- na.omit(resOrdered[abs(resOrdered$log2FoldChange)&gt;2 &amp; resOrdered$padj&lt;0.01,])<br>write.table(final.res,”S30_W30_Sigene.txt”,sep=”\t”)</p>]]></content>
+    <content type="html"><![CDATA[<p>1.DESeq2的安装<br>source(“<a href="https://bioconductor.org/biocLite.R" target="_blank" rel="noopener">https://bioconductor.org/biocLite.R</a>“)<br>biocLite(“DESeq2”)<br>2.读取数据</p><pre><code>library(DESeq2)data&lt;-read.table(&quot;W_H_S_30min.readcount.txt&quot;,header=T,row.names=1)head(data)</code></pre><p>design&lt;-rep(c(“W10”,”H10”,”S10”,”W30”,”H30”,”S30”,”W60”,”H60”,”S60”,”W240”,”H240”,”S240”),each=3)#3类处理，9个样本</p><p>3.构建dds对象<br>colData &lt;- data.frame(row.names=colnames(data),group_list=design)<br>dds &lt;- DESeqDataSetFromMatrix(countData = data,colData = colData,design = ~group_list)<br>4.做normalization<br>dds2 &lt;- DESeq(dds)<br>5.提取数据<br>res &lt;-  results(dds2, contrast=c(“group_list”,”S30”,”W30”))#这里提取的是S30与W30作比较<br>resOrdered &lt;- res[order(res$padj),]<br>resOrdered=as.data.frame(resOrdered)<br>head(resOrdered)<br>6.进行数据的过滤<br>要选择fold change大于4，padj小于0.05|0.01的基因<br>final.res &lt;- na.omit(resOrdered[abs(resOrdered$log2FoldChange)&gt;2 &amp; resOrdered$padj&lt;0.01,])<br>write.table(final.res,”S30_W30_Sigene.txt”,sep=”\t”)</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;利用DESeq2进行差异表达基因筛选&quot;&gt;&lt;a href=&quot;#利用DESeq2进行差异表达基因筛选&quot; class=&quot;headerlink&quot; title=&quot;利用DESeq2进行差异表达基因筛选&quot;&gt;&lt;/a&gt;利用DESeq2进行差异表达基因筛选&lt;/h1&gt;&lt;p&gt;标签（空格分
+        &lt;p&gt;1.DESeq2的安装&lt;br&gt;source(“&lt;a href=&quot;https://bioconductor.org/biocLite.R&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://bioconductor.org/biocLite.R&lt;/
       
     
     </summary>
@@ -103,24 +103,6 @@
     <summary type="html">
     
       &lt;p&gt;刚刚接触评论系统，上网一搜发现普遍采用的第三方评论系统“多说”已经在今年6月阵亡了。幸好我的主题还能够支持另外一种评论系统——Disqus。目前这个博客使用apollo主题搭建，支持Disqus和duoshuo系统，尽管想要做的简洁一些，
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://huans.github.io/2017/12/14/hello-world/"/>
-    <id>https://huans.github.io/2017/12/14/hello-world/</id>
-    <published>2017-12-14T09:30:10.434Z</published>
-    <updated>2017-12-14T10:20:30.393Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br><a id="more"></a></p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
     
     </summary>
     
