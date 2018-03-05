@@ -4,7 +4,7 @@ data&lt;-read.table(&quot;W_H_S_30min.readcount.txt&quot;,header=T,row.names=1)
 head(data)
 </code></pre><p>design&lt;-rep(c(“W10”,”H10”,”S10”,”W30”,”H30”,”S30”,”W60”,”H60”,”S60”,”W240”,”H240”,”S240”),each=3)#3类处理，9个样本</p>
 <p>3.构建dds对象<br>colData &lt;- data.frame(row.names=colnames(data),group_list=design)<br>dds &lt;- DESeqDataSetFromMatrix(countData = data,colData = colData,design = ~group_list)<br>4.做normalization<br>dds2 &lt;- DESeq(dds)<br>5.提取数据<br>res &lt;-  results(dds2, contrast=c(“group_list”,”S30”,”W30”))#这里提取的是S30与W30作比较<br>resOrdered &lt;- res[order(res$padj),]<br>resOrdered=as.data.frame(resOrdered)<br>head(resOrdered)<br>6.进行数据的过滤<br>要选择fold change大于4，padj小于0.05|0.01的基因<br>final.res &lt;- na.omit(resOrdered[abs(resOrdered$log2FoldChange)&gt;2 &amp; resOrdered$padj&lt;0.01,])<br>write.table(final.res,”S30_W30_Sigene.txt”,sep=”\t”)</p>
-</div></article></div></main><footer><div class="paginator"><a href="/2017/12/19/First-blog/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'huan-1';
+</div></article></div></main><footer><div class="paginator"><a href="/2018/03/05/GO和pathway富集分析/" class="prev">PREV</a><a href="/2017/12/19/First-blog/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'huan-1';
 var disqus_identifier = '2018/02/02/利用DESeq2进行差异表达基因筛选/';
 var disqus_title = '转录组分析之--利用DESeq2进行差异基因的筛选';
 var disqus_url = 'https://huans.github.io/2018/02/02/利用DESeq2进行差异表达基因筛选/';
