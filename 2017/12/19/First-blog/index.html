@@ -12,7 +12,7 @@
 <p>下面会讲解怎样将Hexo与github page 联系起来</p>
 <p>##3.连接本地git和Github</p>
 <p>1、设置Git的user name和email：(如果是第一次的话)</p>
-<p>git config –global user.name “xujun”<br>git config –global user.email “gdutxiaoxu@163.com”<br>2、生成密钥<br> ssh-keygen -t rsa -C “gdutxiaoxu@163.com”<br>一直按Enter键就好了，最终生成密钥文件具体路径在~/.ssh中，打开文件复制其中的key到下图中<br>配置Deployment<br>同样在_config.yml文件中，找到Deployment，然后按照如下修改：<br>deploy:<br>  type: git<br>  repo: git@github.com:yourname/yourname.github.io.git<br>  branch: master<br>比如我的仓库的地址是git@github.com:gdutxiaoxu/gdutxiaoxu.github.io.git，所以配置如下<br>deploy:<br>  type: git<br>  repo: git@github.com:gdutxiaoxu/gdutxiaoxu.github.io.git<br>  branch: master</p>
+<p>git config –global user.name “xujun”<br>git config –global user.email “<a href="mailto:gdutxiaoxu@163.com" target="_blank" rel="noopener">gdutxiaoxu@163.com</a>“<br>2、生成密钥<br> ssh-keygen -t rsa -C “<a href="mailto:gdutxiaoxu@163.com" target="_blank" rel="noopener">gdutxiaoxu@163.com</a>“<br>一直按Enter键就好了，最终生成密钥文件具体路径在~/.ssh中，打开文件复制其中的key到下图中<br>配置Deployment<br>同样在_config.yml文件中，找到Deployment，然后按照如下修改：<br>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourname.github.io.git<br>  branch: master<br>比如我的仓库的地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:gdutxiaoxu/gdutxiaoxu.github.io.git，所以配置如下<br>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:gdutxiaoxu/gdutxiaoxu.github.io.git<br>  branch: master</p>
 <p>注意：此处冒号（：）后必须要有空格，不然就会报错了</p>
 <p>写博客、发布文章</p>
 <p>新建一篇博客，执行下面的命令：</p>
