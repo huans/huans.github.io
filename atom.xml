@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huans.github.io/"/>
-  <updated>2018-06-24T17:27:34.766Z</updated>
+  <updated>2019-11-04T15:57:06.060Z</updated>
   <id>https://huans.github.io/</id>
   
   <author>
@@ -17,17 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>观《花漾年华》有感</title>
-    <link href="https://huans.github.io/2018/06/25/%E8%A7%82%E6%9D%8E%E6%96%87%E8%8B%B1%E4%BA%8B%E8%BF%B9%E6%9C%89%E6%84%9F/"/>
-    <id>https://huans.github.io/2018/06/25/观李文英事迹有感/</id>
-    <published>2018-06-24T17:27:31.893Z</published>
-    <updated>2018-06-24T17:27:34.766Z</updated>
+    <title>群体遗传π值和XP-CLR计算</title>
+    <link href="https://huans.github.io/2019/11/04/XP-CLR/"/>
+    <id>https://huans.github.io/2019/11/04/XP-CLR/</id>
+    <published>2019-11-04T14:45:08.620Z</published>
+    <updated>2019-11-04T15:57:06.060Z</updated>
     
-    <content type="html"><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;尽管近来烦心事颇多，文章的事，实验的事，公共事务以及一些其他事情，感觉自己又瘦了一些。恰逢枝江市剧团到华农演出，而演出的内容是新编黄梅戏《花漾年华》。百忙之中抽了一个半小时时间去看了。<a id="more"></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;坦白说，对于戏剧的认识仅限于知道一些戏种，可能“戏种”这个词都是我编造的，事实上并不存在，所以我也可以说我完全不了解戏剧这门艺术，所以我要一整场都不时地瞄一眼字幕，弄清楚她们在唱什么。但是艺术不论以什么样的形式呈现出来，最重要的还是它的感染力，舞台上每一个演员的动作和表情都会是感染观众，从而达到舞台效果甚至社会影响所不可缺少的。这样的一台剧对于我们农大学生，特别是对于我们肩负中国未来农业发展和粮食安全的这样一群人来说是非常值得思考的。我也很有兴趣在花了一个半小时之后，再花一个半小时来消化它。没什么逻辑，记心中所想罢了。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这台剧主要讲述的是一位华农毕业女大学生李文英在毕业后，在自己最美好的年纪，扎根基层，数十年如一日，为广大枝江地区棉农做农技推广，选育高抗高产棉花新品种，解决枯萎病和黄萎病这两大棉花生产中的巨大问题，为此她也忽视了自己的家庭，甚至在丈夫逝世前三天才得知其身患癌症的消息，对于李文英来说，这是不幸，但丈夫对她工作的支持也是最能宽慰她的事情了，好在我们知晓了她的故事，好在有越来越多的人知晓了她的故事，而这样的故事会被许多人铭记也同时激励着很多人。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;就我个人而言，不论是在西大学习期间所领悟的袁先生关于顶天立地，服务三农的谆谆教诲，还是在华农上学所体会到的华农人脚踏实地和朴实无华，这都是我需要印刻在自己品格上的标签。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;犹记得新生第一课是李加纳教授授课，那是我第一次认识到我们的农业生产的大致局面，认识到农业不能只是靠肩挑背扛，不能总是小农经济占主导，我们的国家，我们国家广大农民群众需要我们搞机械化，搞信息化，搞设施农业，搞精准农业，这也要求我们要从农业生产的源头——农业科研上下足功夫。分子标记辅助选择育种，转基因育种，诱变育种这都是我们那一批人在这个课堂上第一次听到的新鲜词语。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本科毕业，选择了华农作为我求学的第二站，同学大都不是很理解，从一个211到另一个211，从一个火炉到另一个火炉，从离女朋友300公里到离她1200公里（在此和她说声对不起）。如果我说这一切都是对傅院士的个人崇拜，那就更没人能理解了。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;很顺利地到了华农，进了GCGI，记得面试时候老板问我你想做什么工作，我说我想下地，想做常规育种，不想做分子生物学。老师是比较惊讶的，大多数孩子怕日晒雨淋，在实验做做分子实验会是个不错的选择。当然了，最后是没让我去做常规育种，后来我也渐渐理解了老师的苦衷，毕竟常规育种这玩意儿毕业真是个难事儿，在此也谢谢老师，但是老师，我还是想说，我其实贼心不死。。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;书读到这里，也差不多快到头了，拿到博士文凭就真的可以去做自己想做的事了，不知道我到了那个时候是不是还有这样的冲劲是不是可以沉得下心来做袁先生和傅院士一直在做的事情。联想自己现在做的事情和今天的看戏的感悟，我会觉得我们的农业科研过于急功近利，我们的研究生培养可能出了一些问题，农业领域需要尖端人才，需要生物信息学，需要结构生物学，但也需要传统的育种家和农艺师，就像戏中李文英那样的人物。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自古以来，农业本来是一个很接地气的行业，但是随着科技的发展，我们这些从业者们似乎很急于摆脱那顶别人眼中关于农业很土很落后的帽子，导致我们的科学研究有点像无根之木，导致我们的科学家和我们的科研工作者们和真正的农业生产脱节了，也就是我们的研究没有完全切实立足于农民的需要。当然，基础研究也非常重要，但我想我们应该重新评估和平衡一下这部分和应用研究所分别占的比例。这是关于我们现在缺少李文英式人物的不成熟思考。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个李文英式的人物需要克服什么困难？</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;家庭联产承包责任制让我们的农村重新焕发了生机和活力，但是我们很清楚中国的农业发展事实上还是比较落后，除了部分地区正在逐步推广和完善机械化和规模化，我们真正的落后地区，农业生产还是很落后，三农问题还是很突出。小农思想依然存在，在这样的具体国情下，农业推广始终不是一个简单的事情，即便我们有了良种，有了良法，我们怎么通过政策之外的方法去让农民接受。这是我们农业推广战线上的所有人需要考虑的问题。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个李文英式的人物需要什么坚持？</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一二三产业本身是各具特点，但是在产业发展不平衡的今天，我们长期依赖的第一产业已经失去了原有的地位，极低的产业附加值极大地阻碍了资本进入，在失去原有从业者的同时对潜在从业者也没有任何吸引力，开玩笑地说，李文英式人物的出现可能有一天只能用情怀来解释。那么需要多少人的情怀才能支撑一个产业呢？解决这样的问题，我们需要一批真正热爱三农的科研人员和科技推广服务人员，需要一批有志于改善农民生活，提升农村环境，促进农业发展的李文英式人物，除了理想和信念，你找不到什么理由让足够多的人从大城市去到农村做这样的坚持，这样的坚持很难，因为它把一切都寄托在个人追求上。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个李文英式的人物需要什么支撑？</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;很遗憾，在这样的产业背景下，我们很难用难以拒绝的待遇去吸引愿意扎根基层的同志。我们似乎只能理解是信念支撑着李文英的坚持，数十年扎根农村，退休后还不愿放弃。但我们也能看到李文英最初是追随者爱情的脚步来到了枝江，从此扎根于此，在几十年的工作中丈夫和女儿给了她莫大的支持。所以即使她只有信念，至少她还有郑荣棣，那么你呢？</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2018.6.25 于武汉狮子山</p>]]></content>
+    <content type="html"><![CDATA[<p>很久没有写过博客了，看见二师兄在群里征集课题组网站的资料我也方然想起来自己曾经也花了很多时间建立的一个博客，既然是心血，那就还是要继续督促自己写下去。<a id="more"></a></p><p>今天所记和分享的的是关于群体基因组学方面的一些知识，也是最近在忙着学习的东西，顺便做一下记录，如果能帮助后来者，那就是有意义的事，具体的定义不再赘述，主要记录一些过程，望理解。</p><p>物种的驯化和改良过程，特别是农作物和家养动物（不知是否表述专业）伴随着人类的出现一直延续至今，如何在基因组层面定义驯化的现象，许多的研究采用了多种不同的方法来解释，群体间分化指数Fst，核苷酸多样性π，以及跨种群复合似然比XP-CLR等。接下来就具体讲一下XP-CLR值和π怎么去算，以及过程中我踩到的坑。</p><h2 id="π值"><a href="#π值" class="headerlink" title="π值"></a>π值</h2><p>这个值在文章中用的也很多了，大概瞄了一下，计算起来也非常简单，我的理解含义是在给定基因组区间内分别计算两个群体的π值，越大说明核苷酸多样性越高，最后求得群体间比值，以一定的阈值去筛选，确定候选区域。</p><p>Vcftools可以轻松完成这个工作</p><pre><code>vcftools --vcf test.vcf --window-pi 500000 --out pi</code></pre><p>参数非常简单，相信不必赘述。在我写这篇博客的时候，我的结果还没出来，对于结果文件的解读后期补上。<br>在过程中我消耗了一点时间的地方其实是在准备Vcf文件的过程，之前用GATK做SNP calling是用的GATK3.8，然而目前GATK更新到4，与以前的版本相比用法做了很大改变，这一点需要注意。</p><h2 id="XP-CLR"><a href="#XP-CLR" class="headerlink" title="XP-CLR"></a>XP-CLR</h2><p>其实这个值目前在很多文章中与π值方法一起用降低假阳性。<br>usage: </p><pre><code>xpclr [-h] --out OUT [--format FORMAT] [--input INPUT][--gdistkey GDISTKEY] [--samplesA SAMPLESA] [--samplesB SAMPLESB][--rrate RRATE] [--map MAP] [--popA POPA] [--popB POPB] --chrCHROM [--ld LDCUTOFF] [--phased] [--verbose VERBOSE][--maxsnps MAXSNPS] [--minsnps MINSNPS] [--size SIZE][--start START] [--stop STOP] [--step STEP]</code></pre><p>主要用到的参数：<br>    –out 输出文件<br>    –format 输入文件的格式，可以使vcf 和hdf5和 txt格式，具体要求参考：<a href="https://github.com/hardingnj/xpclr" target="_blank" rel="noopener">https://github.com/hardingnj/xpclr</a><br>    –samplesA 群体A中的材料名称<br>    –samplesB 群体B中的材料名称<br>    –size 计算窗口<br>    –step 步移距离</p><p>usage: xpclr [-h] –out OUT [–format FORMAT] [–input INPUT]<br>[–gdistkey GDISTKEY] [–samplesA SAMPLESA] [–samplesB SAMPLESB]<br>[–rrate RRATE] [–map MAP] [–popA POPA] [–popB POPB] –chr<br>CHROM [–ld LDCUTOFF] [–phased] [–verbose VERBOSE]<br>[–maxsnps MAXSNPS] [–minsnps MINSNPS] [–size SIZE]<br>[–start START] [–stop STOP] [–step STEP]</p><p>用法非常简单，需要注意的是如果对多个样品的vcf文件进行分析，vcf应当是一个合并后的文件，如何合并参考vcftools。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;尽管近来烦心事颇多，文章的事，实验的事，公共事务以及一些其他事情，感觉自己又瘦了一些。恰逢枝江市剧团到华农演出，而演出的内容是新编黄梅戏《花漾年华》。百忙之中抽了一个半小时时间去看了。
+      &lt;p&gt;很久没有写过博客了，看见二师兄在群里征集课题组网站的资料我也方然想起来自己曾经也花了很多时间建立的一个博客，既然是心血，那就还是要继续督促自己写下去。
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《花漾年华》</title>
+    <link href="https://huans.github.io/2019/11/04/%E8%8A%B1%E6%BC%BE%E5%B9%B4%E5%8D%8E/"/>
+    <id>https://huans.github.io/2019/11/04/花漾年华/</id>
+    <published>2019-11-04T14:28:32.017Z</published>
+    <updated>2019-11-04T14:44:28.705Z</updated>
+    
+    <content type="html"><![CDATA[<p>尽管近来烦心事颇多，文章的事，实验的事，公共事务以及一些其他事情，感觉自己又瘦了一些。恰逢枝江市剧团到华农演出，而演出的内容是新编黄梅戏《花漾年华》。百忙之中抽了一个半小时时间去看了。<a id="more"></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;坦白说，对于戏剧的认识仅限于知道一些戏种，可能“戏种”这个词都是我编造的，事实上并不存在，所以我也可以说我完全不了解戏剧这门艺术，所以我要一整场都不时地瞄一眼字幕，弄清楚她们在唱什么。但是艺术不论以什么样的形式呈现出来，最重要的还是它的感染力，舞台上每一个演员的动作和表情都会是感染观众，从而达到舞台效果甚至社会影响所不可缺少的。这样的一台剧对于我们农大学生，特别是对于我们肩负中国未来农业发展和粮食安全的这样一群人来说是非常值得思考的。我也很有兴趣在花了一个半小时之后，再花一个半小时来消化它。没什么逻辑，记心中所想罢了。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这台剧主要讲述一位华农毕业女大学生李文英在毕业后，在自己最美好的年纪，扎根基层，数十年如一日，为广大枝江地区棉农做农技推广，选育高抗高产棉花新品种，解决枯萎病和黄萎病这两大棉花生产中的巨大问题，为此她也忽视了自己的家庭，甚至在丈夫逝世前三天才得知其身患癌症的消息，对于李文英来说，这是不幸，但丈夫对她工作的支持也是最能宽慰她的事情了，好在我们知晓了她的故事，好在有越来越多的人知晓了她的故事，而这样的故事会被许多人铭记也同时激励着很多人。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;就我个人而言，不论是在西大学习期间所领悟的袁先生关于顶天立地，服务三农的谆谆教诲，还是在华农上学所体会到的华农人脚踏实地和朴实无华，这都是我需要印刻在自己品格上的标签。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;犹记得新生第一课是李加纳教授授课，那是我第一次认识到我们的农业生产的大致局面，认识到农业不能只是靠肩挑背扛，不能总是小农经济占主导，我们的国家，我们国家广大农民群众需要我们搞机械化，搞信息化，搞设施农业，搞精准农业，这也要求我们要从农业生产的源头——农业科研上下足功夫。分子标记辅助选择育种，转基因育种，诱变育种这都是我们那一批人在这个课堂上第一次听到的新鲜词语。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本科毕业，选择了华农作为我求学的第二站，同学大都不是很理解。很顺利地到了华农，进了GCGI，记得面试时候老板问我你想做什么工作，我说我想下地，想做常规育种，不想做分子生物学。老师是比较惊讶的，大多数孩子怕日晒雨淋，在实验做做分子实验会是个不错的选择。当然了，最后是没让我去，后来我也渐渐理解了老师，现在回想当时也太年轻。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;书读到这里，也差不多快到头了，不知道以后是不是还有当初那样的冲劲是不是可以沉得下心来做事情。联想自己现在做的事情和今天的看戏的感悟，我会觉得我们的农业科研过于急功近利，我们的研究生培养可能出了一些问题，农业领域需要尖端人才，需要生物信息学，需要结构生物学，但也需要传统的育种家和农艺师，就像戏中李文英那样的人物。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自古以来，农业本来是一个很接地气的行业，但是随着社会发展，我们这些从业者们似乎很急于摆脱那顶别人眼中关于农业很土很落后的帽子，导致我们的科学研究有点像无根之木，导致我们的科学家和我们的科研工作者们和真正的农业生产脱节了，研究没有完全切实立足于农民的需要。当然，基础研究也非常重要，但我想我们应该重新评估和平衡一下这部分和应用研究所分别占的比例。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;家庭联产承包责任制让我们的农村重新焕发了生机和活力，但是我们很清楚中国的农业发展事实上还是比较落后，除了部分地区正在逐步推广和完善机械化和规模化，我们真正的落后地区，农业生产还是很落后，三农问题还是很突出。小农思想依然存在，在这样的具体国情下，农业推广始终不是一个简单的事情，即便我们有了良种，有了良法，我们怎么通过政策之外的方法去让农民接受。这是我们农业推广战线上的所有人需要考虑的问题。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一二三产业本身是各具特点，但是在产业发展不平衡的今天，我们长期依赖的第一产业已经失去了原有的地位，极低的产业附加值极大地阻碍了资本进入，在失去原有从业者的同时对潜在从业者也没有任何吸引力，开玩笑地说，李文英式人物的出现可能有一天只能用情怀来解释。那么需要多少人的情怀才能支撑一个产业呢？解决这样的问题，我们需要一批真正热爱三农的科研人员和科技推广服务人员，需要一批有志于改善农民生活，提升农村环境，促进农业发展的李文英式人物，除了理想和信念，你找不到什么理由让足够多的人从大城市去到农村做这样的坚持，这样的坚持很难，因为它把一切都寄托在个人追求上。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;很遗憾，在目前这样的产业背景下，我们很难用难以拒绝的待遇去吸引愿意扎根基层的同志。我们似乎只能理解是信念支撑着李文英的坚持，数十年扎根农村，退休后还不愿放弃。但我们也能看到李文英最初是追随者爱情的脚步来到了枝江，从此扎根于此，在几十年的工作中丈夫和女儿给了她莫大的支持。所以即使她只有信念，至少她还有郑荣棣，那么你呢？</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2018.6.25 于武汉狮子山</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;尽管近来烦心事颇多，文章的事，实验的事，公共事务以及一些其他事情，感觉自己又瘦了一些。恰逢枝江市剧团到华农演出，而演出的内容是新编黄梅戏《花漾年华》。百忙之中抽了一个半小时时间去看了。
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>转录组分析之--利用DESeq2进行差异基因的筛选</title>
+    <link href="https://huans.github.io/2019/11/04/DESEQ2/"/>
+    <id>https://huans.github.io/2019/11/04/DESEQ2/</id>
+    <published>2019-11-04T14:22:29.401Z</published>
+    <updated>2019-11-04T14:19:03.469Z</updated>
+    
+    <content type="html"><![CDATA[<p>转录组分析算是比较常见的生物信息分析内容，加之最近确实有课题与之相关，无论如何，花些时间自己做一遍增加理解也可以接受.<a id="more"></a><br>1.DESeq2的安装<br>source(“<a href="https://bioconductor.org/biocLite.R" target="_blank" rel="noopener">https://bioconductor.org/biocLite.R</a>“)<br>biocLite(“DESeq2”)<br>2.读取数据</p><pre><code>library(DESeq2)data&lt;-read.table(&quot;W_H_S_30min.readcount.txt&quot;,header=T,row.names=1)head(data)</code></pre><p>design&lt;-rep(c(“W10”,”H10”,”S10”,”W30”,”H30”,”S30”,”W60”,”H60”,”S60”,”W240”,”H240”,”S240”),each=3)#3类处理，9个样本</p><p>3.构建dds对象<br>colData &lt;- data.frame(row.names=colnames(data),group_list=design)<br>dds &lt;- DESeqDataSetFromMatrix(countData = data,colData = colData,design = ~group_list)<br>4.做normalization<br>dds2 &lt;- DESeq(dds)<br>5.提取数据<br>res &lt;-  results(dds2, contrast=c(“group_list”,”S30”,”W30”))#这里提取的是S30与W30作比较<br>resOrdered &lt;- res[order(res$padj),]<br>resOrdered=as.data.frame(resOrdered)<br>head(resOrdered)<br>6.进行数据的过滤<br>要选择fold change大于4，padj小于0.05|0.01的基因<br>final.res &lt;- na.omit(resOrdered[abs(resOrdered$log2FoldChange)&gt;2 &amp; resOrdered$padj&lt;0.01,])<br>write.table(final.res,”S30_W30_Sigene.txt”,sep=”\t”)</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转录组分析算是比较常见的生物信息分析内容，加之最近确实有课题与之相关，无论如何，花些时间自己做一遍增加理解也可以接受.
     
     </summary>
     
@@ -38,7 +74,7 @@
     <title>转录组分析之--GO和pathway富集分析</title>
     <link href="https://huans.github.io/2018/03/05/GO%E5%92%8Cpathway%E5%AF%8C%E9%9B%86%E5%88%86%E6%9E%90/"/>
     <id>https://huans.github.io/2018/03/05/GO和pathway富集分析/</id>
-    <published>2018-03-05T15:49:11.687Z</published>
+    <published>2018-03-05T15:49:11.688Z</published>
     <updated>2018-03-05T15:50:47.981Z</updated>
     
     <content type="html"><![CDATA[<p>再也不是任何意义上的闲来无事了，迫不得已要自己重新分析转录组数据，虽然这套流程在学界早已非常成熟，但对于新手来说每一步并不是想象的那么简单，特别是对于非模式生物的各类数据分析。简单记录一下自认为值得注意的地方。<a id="more"></a></p><p>1.GO富集分析<br>本来按照实验室的传统，用Blast2GO来做GO分析，不巧的是申请到的Blast2GO一周的试用期刚好与春节假期重叠。白白浪费掉了。不得已去找另一个工具<a href="http://wego.genomics.org.cn/" target="_blank" rel="noopener">WeGo</a>。这里说明一下，我的输入文件是已经被注释好的Gene-GO号。所以能直接使用Wego，如果是原始的fasta格式的序列文件，Wego是无能为力的。</p><p>2.pathway富集分析<br>说到这个，就有点勾起痛苦的回忆了，<a href="http://wego.genomics.org.cn/" target="_blank" rel="noopener">Kobas</a>无疑是一款运用非常广泛的KEGG富集分析软件，但不巧的是就刚好在哪几天Kobas的官网打不开！据了解，截止到目前（3/5/2018）这个网站还是不能正常使用。</p><p>以下全是废话：~~</p><p>好在我在实验室的服务器上找到了Kobas2.0本地版，坑爹的事情再次发生，无论如何软件不能调用，环境变量改了又改，都不行。听师兄说大实验室目录下安装了Kobas3.0，久旱逢甘雨，何况我又是一个对于软件用新不用旧的人。等我兴冲冲调用3.0的时候，坑爹的事情还在继续发生，首先是任然不能正常调用，总是报一些有的没得看不懂的错误，一会儿是找不到module，一会儿是rpy2包出问题什么的。然后咨询了管理员，很不幸，他用自己的账号可以正常调用，师兄也可以正常调用，更不幸的是管理员登我的账号也可以调用！我是一个始终不会轻易认输的人，更别说在这种“羞辱”的情况下，不知道这样的性格是好是坏，但至少它让我浪费了不少时间在这种别人看来鸡毛蒜皮的小事上。直到问题解决的时候，前前后后一天半已经过去了，具体的原因是由于我之前安装了miniconda，调用python的时候是默认在miniconda的文件夹下面的，问题就在这个python的路径上，其实之前我已经想到了是环境变量的问题，所以把通过miniconda安装的所有软件和库都注释了，但是每次调用python发现都是在miniconda的文件下，最终我把miniconda的路径索性也注释了，果然 it works。。</p><p>废话不多说了，kobas的用法大致是这样</p><pre><code>Usage: run_kobas.py [-l] -i infile [-t intype] -s species [-E evalue] [-R rank] [-N nCPUs] [-C coverage] [-Z ortholog] [-b bgfile] [-d database] [-m method] [-n fdr] [-o outfile] [-c cutoff] [-k kobas_home] [-v blast_home] [-y blastdb] [-q kobasdb] [-p blastp] [-x blastx]</code></pre><p>其中需要特别准备的是这个输入文件，我们看到输入文件中ID的支持类型是这样的：</p><pre><code>-t INTYPE, --intype=INTYPE                      input type (fasta:pro, fasta:nuc, blastout:xml,                      blastout:tab, id:refseqpro, id:uniprot, id:ensembl,                      id:ncbigene), default fasta:pro</code></pre><p>所以就着手准备ID，我手上只有棉花在拟南芥中注释的同源基因的信息（TAIR），并没有ENTREz ID（ncbigene）信息，现在要把TAIR转换成ENTREz，各种艰辛在此不表，最终找到了<a href="http://www.bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html" target="_blank" rel="noopener">clusterProfiler</a>这个包，这个包中函数bitr()可以执行ID转换。至于为什么不用clusterProfiler做GO和Pathway富集分析，我想那又是一个非常悲伤的故事，大约也和环境配置有关吧。。</p><p>接下来看这个包是怎么转换的，</p><pre><code>x &lt;- c(&quot;GPX3&quot;,  &quot;GLRX&quot;,   &quot;LBP&quot;,   &quot;CRYAB&quot;, &quot;DEFB1&quot;, &quot;HCLS1&quot;,   &quot;SOD2&quot;,   &quot;HSPA2&quot;,       &quot;ORM1&quot;,  &quot;IGFBP1&quot;, &quot;PTHLH&quot;, &quot;GPC3&quot;,  &quot;IGFBP3&quot;,&quot;TOB1&quot;,    &quot;MITF&quot;,   &quot;NDRG1&quot;,       &quot;NR1H4&quot;, &quot;FGFR3&quot;,  &quot;PVR&quot;,   &quot;IL6&quot;,   &quot;PTPRM&quot;, &quot;ERBB2&quot;,   &quot;NID2&quot;,   &quot;LAMB1&quot;,       &quot;COMP&quot;,  &quot;PLS3&quot;,   &quot;MCAM&quot;,  &quot;SPP1&quot;,  &quot;LAMC1&quot;, &quot;COL4A2&quot;,  &quot;COL4A1&quot;, &quot;MYOC&quot;,       &quot;ANXA4&quot;, &quot;TFPI2&quot;,  &quot;CST6&quot;,  &quot;SLPI&quot;,  &quot;TIMP2&quot;, &quot;CPM&quot;,     &quot;GGT1&quot;,   &quot;NNMT&quot;,       &quot;MAL&quot;,   &quot;EEF1A2&quot;, &quot;HGD&quot;,   &quot;TCN2&quot;,  &quot;CDA&quot;,   &quot;PCCA&quot;,    &quot;CRYM&quot;,   &quot;PDXK&quot;,       &quot;STC1&quot;,  &quot;WARS&quot;,  &quot;HMOX1&quot;, &quot;FXYD2&quot;, &quot;RBP4&quot;,   &quot;SLC6A12&quot;, &quot;KDELR3&quot;, &quot;ITM2B&quot;)eg = bitr(x, fromType=&quot;SYMBOL&quot;, toType=&quot;ENTREZID&quot;, OrgDb=&quot;org.Hs.eg.db&quot;)head(eg)##   SYMBOL ENTREZID## 1   GPX3     2878## 2   GLRX     2745## 3    LBP     3929## 4  CRYAB     1410## 5  DEFB1     1672## 6  HCLS1     3059</code></pre><p>具体用法<a href="http://www.bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html#bitr_kegg-converting-biological-ids-using-kegg-api" target="_blank" rel="noopener">参见此处</a></p><p>有了ID，一切都好说了</p><pre><code>run_kobas.py  -i infile -t intype -s species -d database -o outfile</code></pre><p>Kobas到这里的用法基本结束了，下一章节带来灰常赤鸡的WGCNA的使用说明~</p>]]></content>
@@ -46,24 +82,6 @@
     <summary type="html">
     
       &lt;p&gt;再也不是任何意义上的闲来无事了，迫不得已要自己重新分析转录组数据，虽然这套流程在学界早已非常成熟，但对于新手来说每一步并不是想象的那么简单，特别是对于非模式生物的各类数据分析。简单记录一下自认为值得注意的地方。
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>转录组分析之--利用DESeq2进行差异基因的筛选</title>
-    <link href="https://huans.github.io/2018/03/05/%E5%88%A9%E7%94%A8DESeq2%E8%BF%9B%E8%A1%8C%E5%B7%AE%E5%BC%82%E8%A1%A8%E8%BE%BE%E5%9F%BA%E5%9B%A0%E7%AD%9B%E9%80%89/"/>
-    <id>https://huans.github.io/2018/03/05/利用DESeq2进行差异表达基因筛选/</id>
-    <published>2018-03-05T15:38:52.257Z</published>
-    <updated>2018-03-05T15:38:58.621Z</updated>
-    
-    <content type="html"><![CDATA[<p>绝对算不上闲来无事，一是不闲，二是有事，转录组分析算是比较常见的生物信息分析内容，加之最近确实有课题与之相关，无论如何，花些时间自己做一遍增加理解也可以接受.<a id="more"></a><br>1.DESeq2的安装<br>source(“<a href="https://bioconductor.org/biocLite.R" target="_blank" rel="noopener">https://bioconductor.org/biocLite.R</a>“)<br>biocLite(“DESeq2”)<br>2.读取数据</p><pre><code>library(DESeq2)data&lt;-read.table(&quot;W_H_S_30min.readcount.txt&quot;,header=T,row.names=1)head(data)</code></pre><p>design&lt;-rep(c(“W10”,”H10”,”S10”,”W30”,”H30”,”S30”,”W60”,”H60”,”S60”,”W240”,”H240”,”S240”),each=3)#3类处理，9个样本</p><p>3.构建dds对象<br>colData &lt;- data.frame(row.names=colnames(data),group_list=design)<br>dds &lt;- DESeqDataSetFromMatrix(countData = data,colData = colData,design = ~group_list)<br>4.做normalization<br>dds2 &lt;- DESeq(dds)<br>5.提取数据<br>res &lt;-  results(dds2, contrast=c(“group_list”,”S30”,”W30”))#这里提取的是S30与W30作比较<br>resOrdered &lt;- res[order(res$padj),]<br>resOrdered=as.data.frame(resOrdered)<br>head(resOrdered)<br>6.进行数据的过滤<br>要选择fold change大于4，padj小于0.05|0.01的基因<br>final.res &lt;- na.omit(resOrdered[abs(resOrdered$log2FoldChange)&gt;2 &amp; resOrdered$padj&lt;0.01,])<br>write.table(final.res,”S30_W30_Sigene.txt”,sep=”\t”)</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;绝对算不上闲来无事，一是不闲，二是有事，转录组分析算是比较常见的生物信息分析内容，加之最近确实有课题与之相关，无论如何，花些时间自己做一遍增加理解也可以接受.
     
     </summary>
     
@@ -93,7 +111,7 @@
     <link href="https://huans.github.io/2017/12/18/QTL/"/>
     <id>https://huans.github.io/2017/12/18/QTL/</id>
     <published>2017-12-18T14:19:07.000Z</published>
-    <updated>2017-12-19T02:35:46.607Z</updated>
+    <updated>2017-12-19T02:35:46.608Z</updated>
     
     <content type="html"><![CDATA[<p>近来在学习基于SNP标记的关联分析相关的内容，对于GWAS与基于连锁遗传的QTL定位之间有什么本质区别一直有点迷迷糊糊，从网上看到了一篇<a href="https://1rcloud.net/bbs/topics/174" target="_blank" rel="noopener">文章</a>，感觉部分地解决了疑惑。<a id="more"></a></p><p>##连锁分析<br>连锁分析（linkage analysis）：是<strong>基于家系</strong>研究的一种方法，它利用连锁的原理研究潜在致病基因与待检测标记基因之间的关系，<strong>来判断待检测标记基因是否一起与潜在致病基因由父代遗传给子代</strong>。<br>　　如果同一染色体上的致病基因与待检测基因不连锁，待检测基因将独立于潜在致病基因遗传给下一代，此时待检测标记基因与潜在致病基因位于同一染色体或不同单倍体的几率各一半，否则标明两者之间存在连锁遗传。连锁分析特别适合于单基因疾病的遗传研究，对于复杂疾病的研究具有很大局限性。</p><p>重组（recombination）：遗传学上将产生重组配子的现象称为重组。通常采用重组率θ（即重组配子单体型占子代所有配子单体型的比重）描述重组事件的强度，它反映了亲代产生重组体后代的概率。<br>在连锁分析中，认为θ：</p><p>θ≤0.10 紧密连锁<br>0.1~0.2中度连锁<br>θ≥0.20松弛连锁<br>重组率的大小与等位基因间距离成正比。相对而言，距离较远的基因间发生重组的概率大一些，距离较近的则倾向于出现连锁遗传，形成与亲代相同的非重组配子。</p><p>一般而言，互换和重组只针对同源染色体的两个等位基因，非同源染色体的等位基因间较少发生互换和重组。孟德尔定律是连锁遗传的统计方法基础。</p><p>###连锁分析的两个阶段：<br>参数连锁分析：为经典连锁分析，适用于以孟德尔传递方式遗传的单基因疾病，目的是检验一个或多个遗传标记与疾病易感基因间<strong>是否存在连锁遗传现象以及在连锁状态下的重组率</strong>。参数连锁分析最常用的方法是优势对数计分法（log odds score method，LOD）。<br>非参数连锁分析：是一种不需要事先确定疾病或性状遗传模式的方法，分析复杂疾病的连锁分析时有一定优势。 按分析手段不同可将非参数连锁分析分为： 基于血缘一致（identity by descent，IBD） 基于状态一致（identity by state，IBS） 按分析对象不同可分为： 受累同胞对法（最常用） 受累亲属对法 寻找明显差异的同胞对法</p><p>##关联分析<br>关联分析（association analysis）是一种用来分析标记位点的待检测等位基因与疾病易感基因间是否存在关系的分析方法，是在对候选基因进行初步定位或精细定位的基础上，分析候选基因与复杂疾病或数量性状的关系，达到排除不相关基因的目的。</p><p>##连锁分析与关联分析的区别：</p><p><strong>连锁分析需要在家系中检验等位基因与疾病或者性状间是否为连锁遗传，而关联分析检验群体中疾病或者性状和等位基因间是否存在相关性。</strong>在复杂疾病的分析中，关联分析比连锁分析更为优越。</p><p>关联分析的基础是连锁不平衡。常用的方法是基于群体数据的关联分析和基于家庭数据的关联分析及传递不平衡检验。</p><p>关联分析通常需要同时进行多重假设检验。随着遗传位点数量的增多，同一样本中进行的统计检验次数也随之增多，进而造成假阳性率（Ⅰ类错误）升高。校正的方法有多种，如Bonferroni方法、FDR方法等。</p><p>关联分析在疾病基因定位研究领域的应用：</p><p>候选位点关联研究<br>候选基因关联研究<br>候选位点精细定位的关联研究<br>全基因组关联研究（genome wide association study，GWAS）</p><p>##总结<br>连锁分析是在家系中计算标记与基因是否连锁，通过重组率计算他们的相对位置，从而确定基因所在的候选区间，但是因为家系的重组次数很少，即便标记非常密集，也很难得到较小的区间。关联分析是检验标记与性状之间是否存在相关性，基于连锁不平衡，确定显著位点周围的区域为候选基因区域，标记越密集，精度越高，甚至直接定位到基因本身，但受到群体结构的影响，这样的显著位点可能存在假阳性。</p>]]></content>
     
