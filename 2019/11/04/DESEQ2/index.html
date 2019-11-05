@@ -1,15 +1,230 @@
-<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 转录组分析之--利用DESeq2进行差异基因的筛选 · Huan's blog</title><meta name="description" content="转录组分析之--利用DESeq2进行差异基因的筛选 - Huan Si"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/3.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://huans.github.io/atom.xml" title="Huan's blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/0.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/huans" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://cotton.hzau.edu.cn/" target="_blank" class="nav-list-link">LAB</a></li><li class="nav-list-item"><a href="/about" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">转录组分析之--利用DESeq2进行差异基因的筛选</h1><div class="post-info">Nov 4, 2019</div><div class="post-content"><p>转录组分析算是比较常见的生物信息分析内容，加之最近确实有课题与之相关，无论如何，花些时间自己做一遍增加理解也可以接受.<a id="more"></a><br>1.DESeq2的安装<br>source(“<a href="https://bioconductor.org/biocLite.R&quot;" target="_blank" rel="noopener">https://bioconductor.org/biocLite.R&quot;</a>)<br>biocLite(“DESeq2”)<br>2.读取数据</p>
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>转录组分析之--利用DESeq2进行差异基因的筛选 | Huan&#39;s blog</title>
+  <meta name="author" content="Huan Si">
+  
+  <meta name="description" content="转录组分析算是比较常见的生物信息分析内容，加之最近确实有课题与之相关，无论如何，花些时间自己做一遍增加理解也可以接受.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="转录组分析之--利用DESeq2进行差异基因的筛选">
+  <meta property="og:site_name" content="Huan&#39;s blog">
+
+  
+    <meta property="og:image" content>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Huan&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="/css/style.css">
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-368771XX-X']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+</html>
+<body>
+  <header id="header" class='normal_mode'>
+    <nav id="main-nav">
+  <ul class='container'>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+  </header>
+  <div id="content" class="container">
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+      <time datetime="2019-11-04T14:22:29.401Z"><a href="/2019/11/04/DESEQ2/">Mon, Nov 4 2019, 10:22:29 pm</a></time>
+
+  
+    <h1 class="title">转录组分析之--利用DESeq2进行差异基因的筛选</h1>
+  
+
+
+
+<div class="clear"></div>
+      
+    </header>
+    <div class="entry">
+      
+        <p>转录组分析算是比较常见的生物信息分析内容，加之最近确实有课题与之相关，无论如何，花些时间自己做一遍增加理解也可以接受.<a id="more"></a><br>1.DESeq2的安装<br>source(“<a href="https://bioconductor.org/biocLite.R&quot;" target="_blank" rel="noopener">https://bioconductor.org/biocLite.R&quot;</a>)<br>biocLite(“DESeq2”)<br>2.读取数据</p>
 <pre><code>library(DESeq2)
 data&lt;-read.table(&quot;W_H_S_30min.readcount.txt&quot;,header=T,row.names=1)
 head(data)
 </code></pre><p>design&lt;-rep(c(“W10”,”H10”,”S10”,”W30”,”H30”,”S30”,”W60”,”H60”,”S60”,”W240”,”H240”,”S240”),each=3)#3类处理，9个样本</p>
 <p>3.构建dds对象<br>colData &lt;- data.frame(row.names=colnames(data),group_list=design)<br>dds &lt;- DESeqDataSetFromMatrix(countData = data,colData = colData,design = ~group_list)<br>4.做normalization<br>dds2 &lt;- DESeq(dds)<br>5.提取数据<br>res &lt;-  results(dds2, contrast=c(“group_list”,”S30”,”W30”))#这里提取的是S30与W30作比较<br>resOrdered &lt;- res[order(res$padj),]<br>resOrdered=as.data.frame(resOrdered)<br>head(resOrdered)<br>6.进行数据的过滤<br>要选择fold change大于4，padj小于0.05|0.01的基因<br>final.res <- na.omit(resordered[abs(resordered$log2foldchange)>2 &amp; resOrdered$padj&lt;0.01,])<br>write.table(final.res,”S30_W30_Sigene.txt”,sep=”\t”)</-></p>
-</div></article></div></main><footer><div class="paginator"><a href="/2019/11/04/花漾年华/" class="prev">PREV</a><a href="/2018/03/05/GO和pathway富集分析/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'huan-1';
-var disqus_identifier = '2019/11/04/DESEQ2/';
-var disqus_title = '转录组分析之--利用DESeq2进行差异基因的筛选';
-var disqus_url = 'https://huans.github.io/2019/11/04/DESEQ2/';
-(function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();</script><script id="dsq-count-scr" src="//huan-1.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2019 <a href="https://huans.github.io">Huan Si</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
+
+      
+    </div>
+    <footer>
+      
+          
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <span class="jiathis_txt">分享到：</span>
+  <a class="jiathis_button_weixin">微信</a>
+  <a class="jiathis_button_tsina">新浪微博</a>
+  <a class="jiathis_button_renren">人人网</a>
+  <a class="jiathis_button_qzone">QQ空间</a>
+  <a class="jiathis_button_douban">豆瓣</a>
+  <a class="jiathis_button_pocket">Pocket</a>
+  <a href="http://www.jiathis.com/share?uid=901656" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=901656" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          <div class="clearfix"></div>
+          <nav id="pagination">
+  
+    <a href="/2019/11/04/花漾年华/" class="alignleft prev"><i class="fa fa-long-arrow-left"></i>Next</a>
+  
+  
+    <a href="/2018/03/05/GO和pathway富集分析/" class="alignright next">Prev<i class="fa fa-long-arrow-right"></i></a>
+  
+  <div class="clearfix"></div>
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+      <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-thread-key="/2019/11/04/DESEQ2/"></div>
+<!-- Duoshuo Comment END -->
+  
+</section>
+
+
+
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div>
+  
+  &copy; 2019 Huan Si
+  
+</div>
+Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="noopener">Hexo</a> and <a href="http://pages.github.com/" title="GitHub Pages" target="_blank" rel="noopener">GitHub Pages</a>
+
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        (function(){
+
+            $(window).scroll(function(){
+
+                var scrollTop = $(window).scrollTop();
+                if ( scrollTop >200 ){
+                    $("#main-nav").removeClass('normal_mode').addClass('top_mode');
+                } else{
+                    $("#main-nav").removeClass('top_mode').addClass('normal_mode');
+                }
+
+            });
+
+        })();
+    </script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox({
+      'titlePosition': 'inside'
+    });
+  })(jQuery);
+  </script>
+
+
+
+    
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"your_id"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = 'http://static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+<script type="text/javascript">
+  
+  $(function(){
+
+    $('.title').hover(
+      function() {      
+        $(this).stop().animate(
+          {'marginLeft': '10px'}, 200
+        );   
+      }, 
+      function() {       
+        $(this).stop().animate({'marginLeft': '0px'}, 200);      
+      
+    });   
+
+  });
+
+</script>
+
+
+</body>
+</html>
