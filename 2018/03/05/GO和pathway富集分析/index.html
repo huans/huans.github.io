@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 转录组分析之--GO和pathway富集分析 · Huan's blog</title><meta name="description" content="转录组分析之--GO和pathway富集分析 - Huan Si"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/3.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://huans.github.io/atom.xml" title="Huan's blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/3.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/huans" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://cotton.hzau.edu.cn/" target="_blank" class="nav-list-link">LAB</a></li><li class="nav-list-item"><a href="/about" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">转录组分析之--GO和pathway富集分析</h1><div class="post-info">Mar 5, 2018</div><div class="post-content"><p>再也不是任何意义上的闲来无事了，迫不得已要自己重新分析转录组数据，虽然这套流程在学界早已非常成熟，但对于新手来说每一步并不是想象的那么简单，特别是对于非模式生物的各类数据分析。简单记录一下自认为值得注意的地方。<a id="more"></a></p>
+<p>1.GO富集分析<br>本来按照实验室的传统，用Blast2GO来做GO分析，不巧的是申请到的Blast2GO一周的试用期刚好与春节假期重叠。白白浪费掉了。不得已去找另一个工具<a href="http://wego.genomics.org.cn/" target="_blank" rel="noopener">WeGo</a>。这里说明一下，我的输入文件是已经被注释好的Gene-GO号。所以能直接使用Wego，如果是原始的fasta格式的序列文件，Wego是无能为力的。</p>
+<p>2.pathway富集分析<br>说到这个，就有点勾起痛苦的回忆了，<a href="http://wego.genomics.org.cn/" target="_blank" rel="noopener">Kobas</a>无疑是一款运用非常广泛的KEGG富集分析软件，但不巧的是就刚好在哪几天Kobas的官网打不开！据了解，截止到目前（3/5/2018）这个网站还是不能正常使用。</p>
+<p>以下全是废话：~~</p>
+<p>好在我在实验室的服务器上找到了Kobas2.0本地版，坑爹的事情再次发生，无论如何软件不能调用，环境变量改了又改，都不行。听师兄说大实验室目录下安装了Kobas3.0，久旱逢甘雨，何况我又是一个对于软件用新不用旧的人。等我兴冲冲调用3.0的时候，坑爹的事情还在继续发生，首先是任然不能正常调用，总是报一些有的没得看不懂的错误，一会儿是找不到module，一会儿是rpy2包出问题什么的。然后咨询了管理员，很不幸，他用自己的账号可以正常调用，师兄也可以正常调用，更不幸的是管理员登我的账号也可以调用！我是一个始终不会轻易认输的人，更别说在这种“羞辱”的情况下，不知道这样的性格是好是坏，但至少它让我浪费了不少时间在这种别人看来鸡毛蒜皮的小事上。直到问题解决的时候，前前后后一天半已经过去了，具体的原因是由于我之前安装了miniconda，调用python的时候是默认在miniconda的文件夹下面的，问题就在这个python的路径上，其实之前我已经想到了是环境变量的问题，所以把通过miniconda安装的所有软件和库都注释了，但是每次调用python发现都是在miniconda的文件下，最终我把miniconda的路径索性也注释了，果然 it works。。</p>
+<p>废话不多说了，kobas的用法大致是这样</p>
+<pre><code>Usage: run_kobas.py [-l] -i infile [-t intype] -s species [-E evalue] [-R rank] [-N nCPUs] [-C coverage] [-Z ortholog] [-b bgfile] [-d database] [-m method] [-n fdr] [-o outfile] [-c cutoff] [-k kobas_home] [-v blast_home] [-y blastdb] [-q kobasdb] [-p blastp] [-x blastx]
+</code></pre><p>其中需要特别准备的是这个输入文件，我们看到输入文件中ID的支持类型是这样的：</p>
+<pre><code>-t INTYPE, --intype=INTYPE
+                      input type (fasta:pro, fasta:nuc, blastout:xml,
+                      blastout:tab, id:refseqpro, id:uniprot, id:ensembl,
+                      id:ncbigene), default fasta:pro
+</code></pre><p>所以就着手准备ID，我手上只有棉花在拟南芥中注释的同源基因的信息（TAIR），并没有ENTREz ID（ncbigene）信息，现在要把TAIR转换成ENTREz，各种艰辛在此不表，最终找到了<a href="http://www.bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html" target="_blank" rel="noopener">clusterProfiler</a>这个包，这个包中函数bitr()可以执行ID转换。至于为什么不用clusterProfiler做GO和Pathway富集分析，我想那又是一个非常悲伤的故事，大约也和环境配置有关吧。。</p>
+<p>接下来看这个包是怎么转换的，</p>
+<pre><code>x &lt;- c(&quot;GPX3&quot;,  &quot;GLRX&quot;,   &quot;LBP&quot;,   &quot;CRYAB&quot;, &quot;DEFB1&quot;, &quot;HCLS1&quot;,   &quot;SOD2&quot;,   &quot;HSPA2&quot;,
+       &quot;ORM1&quot;,  &quot;IGFBP1&quot;, &quot;PTHLH&quot;, &quot;GPC3&quot;,  &quot;IGFBP3&quot;,&quot;TOB1&quot;,    &quot;MITF&quot;,   &quot;NDRG1&quot;,
+       &quot;NR1H4&quot;, &quot;FGFR3&quot;,  &quot;PVR&quot;,   &quot;IL6&quot;,   &quot;PTPRM&quot;, &quot;ERBB2&quot;,   &quot;NID2&quot;,   &quot;LAMB1&quot;,
+       &quot;COMP&quot;,  &quot;PLS3&quot;,   &quot;MCAM&quot;,  &quot;SPP1&quot;,  &quot;LAMC1&quot;, &quot;COL4A2&quot;,  &quot;COL4A1&quot;, &quot;MYOC&quot;,
+       &quot;ANXA4&quot;, &quot;TFPI2&quot;,  &quot;CST6&quot;,  &quot;SLPI&quot;,  &quot;TIMP2&quot;, &quot;CPM&quot;,     &quot;GGT1&quot;,   &quot;NNMT&quot;,
+       &quot;MAL&quot;,   &quot;EEF1A2&quot;, &quot;HGD&quot;,   &quot;TCN2&quot;,  &quot;CDA&quot;,   &quot;PCCA&quot;,    &quot;CRYM&quot;,   &quot;PDXK&quot;,
+       &quot;STC1&quot;,  &quot;WARS&quot;,  &quot;HMOX1&quot;, &quot;FXYD2&quot;, &quot;RBP4&quot;,   &quot;SLC6A12&quot;, &quot;KDELR3&quot;, &quot;ITM2B&quot;)
+eg = bitr(x, fromType=&quot;SYMBOL&quot;, toType=&quot;ENTREZID&quot;, OrgDb=&quot;org.Hs.eg.db&quot;)
+head(eg)
+##   SYMBOL ENTREZID
+## 1   GPX3     2878
+## 2   GLRX     2745
+## 3    LBP     3929
+## 4  CRYAB     1410
+## 5  DEFB1     1672
+## 6  HCLS1     3059
+</code></pre><p>具体用法<a href="http://www.bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html#bitr_kegg-converting-biological-ids-using-kegg-api" target="_blank" rel="noopener">参见此处</a></p>
+<p>有了ID，一切都好说了</p>
+<pre><code>run_kobas.py  -i infile -t intype -s species -d database -o outfile
+</code></pre><p>Kobas到这里的用法基本结束了，下一章节带来灰常赤鸡的WGCNA的使用说明~</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/11/04/DESEQ2/" class="prev">PREV</a><a href="/2017/12/19/First-blog/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'huan-1';
+var disqus_identifier = '2018/03/05/GO和pathway富集分析/';
+var disqus_title = '转录组分析之--GO和pathway富集分析';
+var disqus_url = 'https://huans.github.io/2018/03/05/GO和pathway富集分析/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//huan-1.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2019 <a href="https://huans.github.io">Huan Si</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

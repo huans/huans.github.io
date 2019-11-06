@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 群体遗传π值和XP-CLR计算 · Huan's blog</title><meta name="description" content="群体遗传π值和XP-CLR计算 - Huan Si"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/3.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://huans.github.io/atom.xml" title="Huan's blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/3.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/huans" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://cotton.hzau.edu.cn/" target="_blank" class="nav-list-link">LAB</a></li><li class="nav-list-item"><a href="/about" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">群体遗传π值和XP-CLR计算</h1><div class="post-info">Nov 4, 2019</div><div class="post-content"><p>很久没有写过博客了，看见二师兄在群里征集课题组网站的资料我也方然想起来自己曾经也花了很多时间建立的一个博客，既然是心血，那就还是要继续督促自己写下去。<a id="more"></a></p>
+<p>今天所记和分享的的是关于群体基因组学方面的一些知识，也是最近在忙着学习的东西，顺便做一下记录，如果能帮助后来者，那就是有意义的事，具体的定义不再赘述，主要记录一些过程，望理解。</p>
+<p>物种的驯化和改良过程，特别是农作物和家养动物（不知是否表述专业）伴随着人类的出现一直延续至今，如何在基因组层面定义驯化的现象，许多的研究采用了多种不同的方法来解释，群体间分化指数Fst，核苷酸多样性π，以及跨种群复合似然比XP-CLR等。接下来就具体讲一下XP-CLR值和π怎么去算，以及过程中我踩到的坑。</p>
+<h2 id="π值"><a href="#π值" class="headerlink" title="π值"></a>π值</h2><p>这个值在文章中用的也很多了，大概瞄了一下，计算起来也非常简单，我的理解含义是在给定基因组区间内分别计算两个群体的π值，越大说明核苷酸多样性越高，最后求得群体间比值，以一定的阈值去筛选，确定候选区域。</p>
+<p>Vcftools可以轻松完成这个工作</p>
+<pre><code>vcftools --vcf test.vcf --window-pi 500000 --out pi
+</code></pre><p>参数非常简单，相信不必赘述。在我写这篇博客的时候，我的结果还没出来，对于结果文件的解读后期补上。<br>在过程中我消耗了一点时间的地方其实是在准备Vcf文件的过程，之前用GATK做SNP calling是用的GATK3.8，然而目前GATK更新到4，与以前的版本相比用法做了很大改变，这一点需要注意。</p>
+<h2 id="XP-CLR"><a href="#XP-CLR" class="headerlink" title="XP-CLR"></a>XP-CLR</h2><p>其实这个值目前在很多文章中与π值方法一起用降低假阳性。<br>usage: </p>
+<pre><code>xpclr [-h] --out OUT [--format FORMAT] [--input INPUT]
+[--gdistkey GDISTKEY] [--samplesA SAMPLESA] [--samplesB SAMPLESB]
+[--rrate RRATE] [--map MAP] [--popA POPA] [--popB POPB] --chr
+CHROM [--ld LDCUTOFF] [--phased] [--verbose VERBOSE]
+[--maxsnps MAXSNPS] [--minsnps MINSNPS] [--size SIZE]
+[--start START] [--stop STOP] [--step STEP]
+</code></pre><p>主要用到的参数：<br>    –out 输出文件<br>    –format 输入文件的格式，可以使vcf 和hdf5和 txt格式，具体要求参考：<a href="https://github.com/hardingnj/xpclr" target="_blank" rel="noopener">https://github.com/hardingnj/xpclr</a><br>    –samplesA 群体A中的材料名称<br>    –samplesB 群体B中的材料名称<br>    –size 计算窗口<br>    –step 步移距离</p>
+<p>usage: xpclr [-h] –out OUT [–format FORMAT] [–input INPUT]<br>[–gdistkey GDISTKEY] [–samplesA SAMPLESA] [–samplesB SAMPLESB]<br>[–rrate RRATE] [–map MAP] [–popA POPA] [–popB POPB] –chr<br>CHROM [–ld LDCUTOFF] [–phased] [–verbose VERBOSE]<br>[–maxsnps MAXSNPS] [–minsnps MINSNPS] [–size SIZE]<br>[–start START] [–stop STOP] [–step STEP]</p>
+<p>用法非常简单，需要注意的是如果对多个样品的vcf文件进行分析，vcf应当是一个合并后的文件，如何合并参考vcftools。</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/11/05/sentieon/" class="prev">PREV</a><a href="/2019/11/04/花漾年华/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'huan-1';
+var disqus_identifier = '2019/11/04/XP-CLR/';
+var disqus_title = '群体遗传π值和XP-CLR计算';
+var disqus_url = 'https://huans.github.io/2019/11/04/XP-CLR/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//huan-1.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2019 <a href="https://huans.github.io">Huan Si</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
