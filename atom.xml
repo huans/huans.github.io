@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huans.github.io/"/>
-  <updated>2019-11-24T10:48:22.692Z</updated>
+  <updated>2019-11-24T10:53:26.076Z</updated>
   <id>https://huans.github.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>上传原始测序数据到NCBI</title>
     <link href="https://huans.github.io/2019/11/24/tags_%20NCBI%20Data%20submission/"/>
     <id>https://huans.github.io/2019/11/24/tags_ NCBI Data submission/</id>
-    <published>2019-11-24T10:48:21.543Z</published>
-    <updated>2019-11-24T10:48:22.692Z</updated>
+    <published>2019-11-24T10:53:24.892Z</published>
+    <updated>2019-11-24T10:53:26.076Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://chuantu.xyz/t6/703/1574590234x3030586988.png" alt="此处输入图片的描述"><br><a id="more"></a><br>发表文章时对于数据的公开很多杂志做了强制性的要求，一来为了方便他人重复自己的结果，也为了更好整合和利用数据。我之前向NCBI上传过一批数据，没有记录具体的方法，后来也发现有不少人问起，刚好有一批新数据需要上传就顺便简单记录一下，有问题再详细写一下。</p><p>#1. 创建账号<br><img src="http://chuantu.xyz/t6/703/1574590871x3030586988.png" alt="此处输入图片的描述"></p><p>#2. 创建Bioproject<br><img src="http://www.bioengx.com/wp-content/uploads/2019/07/20-768x163.png" alt="此处输入图片的描述"><br>关于具体内容，有什么就填什么，其中有一些必填项和选填项。</p><p>#3. 创建Biosample<br><img src="http://www.bioengx.com/wp-content/uploads/2019/07/13.png" alt="此处输入图片的描述"><br>同样是根据研究项目实际情况，填写信息；每填写完一步，都要点击页面下方的continue，保存已填写的信息。<br>填写表格时需注意尽量用不同属性区分不同样品。</p><h1 id="4-上传SRA"><a href="#4-上传SRA" class="headerlink" title="4. 上传SRA"></a>4. 上传SRA</h1><p>直接登录网址，创建 New submission。<br><a href="https://submit.ncbi.nlm.nih.gov/subs/sra/" target="_blank" rel="noopener">https://submit.ncbi.nlm.nih.gov/subs/sra/</a><br>按照要求填写表格，如果数据量比较小，可以使用在线方式上传，对于数据量较大的项目，可以使用NCBI的Aspera软件，详细参见链接：<a href="https://www.ncbi.nlm.nih.gov/sra/docs/submitfiles/" target="_blank" rel="noopener">https://www.ncbi.nlm.nih.gov/sra/docs/submitfiles/</a><br>    ascp -i &lt;密码文件绝对路径&gt; -QT -l100m -k1 -d &lt;等待上传的文件绝对路径&gt; <a href="mailto:subasp@upload.ncbi.nlm.nih.gov" target="_blank" rel="noopener">subasp@upload.ncbi.nlm.nih.gov</a>:uploads/XXXXXXXXXXXX</p>]]></content>
     
